@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ananda | Portofolio</title>
+  <meta name="description" content="Portofolio Ananda Wimaulana, siswa kelas XII Rekayasa Perangkat Lunak di SMK Negeri 20 Jakarta." />
+  <meta name="theme-color" content="#050510" />
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || 'dark'; } catch { document.documentElement.dataset.theme = 'dark'; }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>tailwind = { config: { corePlugins: { preflight: false } } };</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="pre-letter">A</span><span class="pre-letter">n</span><span class="pre-letter">a</span><span class="pre-letter">n</span><span class="pre-letter">d</span><span class="pre-letter">a</span>
+      </div>
+      <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+      <span class="preloader-pct" id="preloaderPct">0%</span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo"><span class="logo-mark"></span>A.W<span class="dot">.</span>Developer</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#experience">Pendidikan</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Aktifkan tema terang" title="Aktifkan tema terang">
+        <i class="theme-icon sun-icon" data-lucide="sun" aria-hidden="true"></i>
+        <i class="theme-icon moon-icon" data-lucide="moon" aria-hidden="true"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div class="hero-text bento-card">
+          <div class="hero-badge reveal">
+            <span class="pulse-dot"></span>
+            Siswa kelas XII Rekayasa Perangkat Lunak
+          </div>
+      <h1 class="reveal delay-1 hero-title">
+        <span class="hero-title-small">Halo, saya</span>
+        <span class="hero-title-name"><span>Ananda</span><span>Wimaulana<span class="dot">.</span></span></span>
+      </h1>
+      <div class="typing-wrapper reveal delay-2">
+        <span class="typing-prefix">Saya tertarik pada</span>
+        <span class="typing-text" id="typingText">Pengembangan Web</span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-desc reveal delay-3">
+        Saya senang belajar membuat website dan mencoba langsung teknologi yang saya pelajari di sekolah.
+      </p>
+      <div class="hero-actions reveal delay-4">
+        <a href="#projects" class="btn btn-primary inline-flex items-center gap-2">Lihat Proyek <i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
+        <a href="assets/cv-nanda.jpeg" class="btn btn-ghost inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">Lihat CV <i data-lucide="file-text" aria-hidden="true"></i></a>
+        <a href="assets/cv-nanda.jpeg" class="btn btn-ghost inline-flex items-center gap-2" download>Unduh CV <i data-lucide="download" aria-hidden="true"></i></a>
+      </div>
+      <div class="hero-context reveal delay-4"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>XII RPL</span><span class="context-divider">·</span><span>SMK Negeri 20 Jakarta</span></div>
+      <div class="hero-socials reveal delay-5">
+        <a href="https://github.com/Nanskyy24?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.11-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ananda-wimaulana-93619943b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/nnaaaaannn_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+        </a>
+        </div>
+        </div>
+
+        <div class="hero-visual bento-card reveal delay-3" aria-label="Visual jaringan teknologi interaktif">
+          <canvas id="particles" aria-hidden="true"></canvas>
+          <div class="lanyard" aria-hidden="true"><span>ANANDA · JUNIOR WEB DEVELOPER</span></div>
+          <div class="visual-center">
+            <div class="identity-card">
+              <div class="identity-card-top"><span>PORTOFOLIO / 2026</span><i data-lucide="scan-line" aria-hidden="true"></i></div>
+              <div class="identity-avatar"><img src="assets/nanda-porto.jpeg" alt="Foto Ananda Wimaulana"><i data-lucide="sparkles" aria-hidden="true"></i></div>
+              <div class="identity-card-bottom"><span class="identity-name">Ananda Wimaulana</span><span class="identity-role">SISWA REKAYASA PERANGKAT LUNAK</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tentang Saya</span>
+        <h2>Kenali <span class="gradient-text">Lebih Dekat</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-photo">
+            <div class="photo-placeholder"><img src="assets/nanda-porto.jpeg" alt="Foto Ananda Wimaulana"></div>
+            <div class="photo-glow"></div>
+          </div>
+          <div class="about-highlights">
+            <div><b>Fokus</b><span>Pengembangan website</span></div>
+            <div><b>Pengalaman</b><span>Proyek sekolah</span></div>
+            <div><b>Cara kerja</b><span>Mandiri dan tim</span></div>
+          </div>
+        </div>
+        <div class="about-text reveal delay-1">
+          <h3>Belajar dengan Membangun</h3>
+          <p>
+            Saya Ananda, siswa kelas XII Rekayasa Perangkat Lunak di SMK Negeri 20 Jakarta. Saya tertarik pada pembuatan website dan senang mempelajari teknologi dengan mengerjakan proyek secara langsung.
+          </p>
+          <p>
+            Saya terbiasa mengerjakan tugas secara mandiri maupun bersama tim. Saat membuat proyek, saya berusaha menjaga tampilannya mudah dipahami dan terus menyesuaikan diri ketika menemukan hal baru.
+          </p>
+          <ul class="about-list">
+            <li><span class="check">✓</span> Kreatif saat mencari solusi</li>
+            <li><span class="check">✓</span> Nyaman bekerja dalam tim</li>
+            <li><span class="check">✓</span> Mudah beradaptasi dan mau belajar</li>
+            <li><span class="check">✓</span> Menyukai pemecahan masalah</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Kerja Sama? Mari Bicara</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Yang Saya Gunakan</span>
+        <h2>Keahlian &amp; <span class="gradient-text">Teknologi</span></h2>
+        <p class="section-desc">Teknologi yang sedang saya pelajari dan gunakan dalam proyek sekolah.</p>
+      </div>
+      <div class="skill-filters reveal" role="group" aria-label="Filter keahlian">
+        <button class="skill-filter active" data-skill-filter="all" aria-pressed="true">Semua</button>
+        <button class="skill-filter" data-skill-filter="programming" aria-pressed="false">Bahasa Pemrograman</button>
+        <button class="skill-filter" data-skill-filter="frontend" aria-pressed="false">Frontend</button>
+        <button class="skill-filter" data-skill-filter="mobile" aria-pressed="false">Mobile</button>
+        <button class="skill-filter" data-skill-filter="backend" aria-pressed="false">Backend</button>
+        <button class="skill-filter" data-skill-filter="database" aria-pressed="false">Database</button>
+        <button class="skill-filter" data-skill-filter="softskill" aria-pressed="false">Soft Skill</button>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item reveal" data-skill-category="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy"><span>HTML</span><small>Frontend</small></div>
+        <div class="tech-item reveal delay-1" data-skill-category="frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy"><span>CSS</span><small>Frontend</small></div>
+        <div class="tech-item reveal delay-2" data-skill-category="programming"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy"><span>JavaScript</span><small>Bahasa Pemrograman</small></div>
+        <div class="tech-item reveal" data-skill-category="programming"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" loading="lazy"><span>PHP</span><small>Bahasa Pemrograman</small></div>
+        <div class="tech-item reveal delay-1" data-skill-category="backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" loading="lazy"><span>Laravel</span><small>Backend</small></div>
+        <div class="tech-item reveal delay-2" data-skill-category="database"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy"><span>MySQL</span><small>Database</small></div>
+        <div class="tech-item reveal" data-skill-category="mobile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy"><span>Flutter</span><small>Mobile</small></div>
+        <div class="tech-item reveal" data-skill-category="softskill"><i data-lucide="lightbulb" aria-hidden="true"></i><span>Kreativitas</span><small>Soft Skill</small></div>
+        <div class="tech-item reveal delay-1" data-skill-category="softskill"><i data-lucide="users" aria-hidden="true"></i><span>Kerja Tim</span><small>Soft Skill</small></div>
+        <div class="tech-item reveal delay-2" data-skill-category="softskill"><i data-lucide="shuffle" aria-hidden="true"></i><span>Adaptabilitas</span><small>Soft Skill</small></div>
+        <div class="tech-item reveal" data-skill-category="softskill"><i data-lucide="puzzle" aria-hidden="true"></i><span>Pemecahan Masalah</span><small>Soft Skill</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Karya Pilihan</span>
+        <h2>Proyek</h2>
+        <p class="section-desc">Beberapa proyek yang saya kembangkan, dari aplikasi web hingga solusi digital sehari-hari.</p>
+      </div>
+      <div class="project-filters reveal" role="group" aria-label="Filter proyek">
+        <button class="project-filter active" type="button" data-project-filter="all" aria-pressed="true">Semua</button>
+        <button class="project-filter" type="button" data-project-filter="dinamis" aria-pressed="false">Web Dinamis</button>
+        <button class="project-filter" type="button" data-project-filter="statis" aria-pressed="false">Web Statis</button>
+      </div>
+      <div class="projects-grid" id="projectGrid">
+        <article class="project-card reveal" data-category="dinamis" data-github="" data-demo="">
+          <div class="project-cover cover-library" aria-label="Sampul proyek website galeri sekolah">
+            <span class="cover-number">01</span><span class="cover-label">Galeri<br>sekolah</span>
+          </div>
+          <div class="project-body">
+            <h3>Website Galeri Sekolah</h3>
+            <p>Website untuk menampilkan galeri sekolah. Dibuat dengan HTML, CSS, dan JavaScript, serta Laravel dengan PHP dan MySQL untuk sisi server dan penyimpanan data.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+            <div class="project-links"><button class="project-detail-trigger" type="button" data-project-detail>Lihat Detail <i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div>
+          </div>
+        </article>
+        <article class="project-card reveal delay-1" data-category="statis" data-github="" data-demo="">
+          <div class="project-cover cover-portfolio" aria-label="Sampul proyek simulasi perbankan syariah">
+            <span class="cover-number">02</span><span class="cover-label">Simulasi<br>perbankan</span>
+          </div>
+          <div class="project-body">
+            <h3>Simulasi Perbankan Syariah</h3>
+            <p>Proyek website simulasi perbankan syariah untuk mempelajari alur layanan perbankan melalui sebuah aplikasi web.</p>
+            <div class="project-tech"><span>Simulasi Web</span><span>Proyek Sekolah</span></div>
+            <div class="project-links"><button class="project-detail-trigger" type="button" data-project-detail>Lihat Detail <i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div>
+          </div>
+        </article>
+    </div>
+  </section>
+
+  <dialog class="project-dialog" id="projectDialog" aria-labelledby="projectDialogTitle">
+    <div class="project-dialog-inner">
+      <div class="project-dialog-top">
+        <span class="dialog-eyebrow">RINCIAN PROYEK</span>
+        <button class="dialog-close" type="button" aria-label="Tutup detail proyek"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div class="dialog-cover" id="projectDialogCover" aria-hidden="true"></div>
+      <div class="dialog-content">
+        <span class="dialog-category" id="projectDialogCategory"></span>
+        <h2 id="projectDialogTitle"></h2>
+        <p id="projectDialogDescription"></p>
+        <div class="project-tech" id="projectDialogTech"></div>
+        <div class="dialog-actions">
+          <a class="btn btn-primary" id="projectDemoLink" target="_blank" rel="noopener noreferrer">Demo Langsung <i data-lucide="external-link" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" id="projectGithubLink" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="github" aria-hidden="true"></i></a>
+        </div>
+        <p class="dialog-note" id="projectDemoNote" hidden>Demo langsung belum tersedia untuk proyek ini.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Pendidikan</span>
+        <h2>Riwayat <span class="gradient-text">Sekolah</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024–2027</span>
+            <h3>SMK Negeri 20 Jakarta</h3>
+            <p>XII Rekayasa Perangkat Lunak (RPL) · Sedang menempuh pendidikan.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021–2024</span>
+            <h3>SMP Negeri 238 Jakarta</h3>
+            <p>Pendidikan menengah pertama.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2015–2021</span>
+            <h3>SD Negeri 03</h3>
+            <p>Pendidikan dasar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Kontak</span>
+        <h2>Hubungi <span class="gradient-text">Saya</span></h2>
+        <p class="section-desc">Punya pertanyaan atau ingin berkolaborasi? Kirim pesan melalui formulir di bawah ini.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Ayo terhubung!</h3>
+          <p>Saya selalu terbuka untuk diskusi tentang proyek, kolaborasi, atau sekadar berbincang tentang teknologi.</p>
+          <div class="contact-item">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <div><b>Email</b><a href="mailto:anandawimaulana05@gmail.com">anandawimaulana05@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="7"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <div><b>Fokus Saat Ini</b><span>Pengembangan web &amp; UI/UX</span></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z"/><path d="m15 5 4 4"/></svg>
+            </span>
+            <div><b>Topik Kolaborasi</b><span>Proyek web &amp; belajar bersama</span></div>
+          </div>
+        </div>
+        <form class="contact-form reveal delay-1" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama kamu" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan kamu di sini..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Kirim Pesan</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#home" class="logo"><span class="logo-mark"></span>Ananda<span class="dot">.</span>Portofolio</a>
+      <p> © 2026 Ananda. Hak cipta dilindungi.</p>
+      <a href="#home" class="back-to-top" aria-label="Kembali ke atas">↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
